@@ -31,7 +31,6 @@ const operators = [
     { className: "operator", symbol: "/" },
     { className: "multiply", symbol: "*" },
     {className:"dot",symbol:"."},
-    {className:"per",symbol:"%"}
 ];
 
 operators.forEach(op => {
@@ -47,4 +46,8 @@ document.querySelector(".equal").addEventListener("click", () => {
     } catch (err) {
         inputField.value = "Error";
     }
+});
+
+document.querySelector(".per").addEventListener("click",()=>{
+    inputField.value=inputField.value/100;
 });
